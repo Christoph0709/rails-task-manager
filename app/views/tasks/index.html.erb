@@ -3,7 +3,6 @@
 <ul>
   <% @tasks.each do |task| %>
     <% done = task.completed ? '[x]' : '[]' %>
-    <li><%= done %><%=task.title %></li>
+    <li><%= link_to task.title, task_path(task) %></li>
   <% end %>
 </ul>
-
